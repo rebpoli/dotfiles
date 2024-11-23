@@ -1,0 +1,26 @@
+! ---------  Global-------                                                                                                                                                                    
+! ------------------------------                                                                                                                                                              
+                                                                                                                                                                                              
+Xcursor.theme: Bibata_Amber                                                                                                                                                                   
+Xcursor.size: 32                                                                                                                                                                              
+!! --------------------------                                                                                                                                                                 
+!xterm settings                                                                                                                                                                               
+!-----------------------------                                                                                                                                                                
+XTerm.termName: xterm-256color                                                                                                                                                                
+! Make 'Alt' key behave as on other terminal emulators                                                                                                                                        
+XTerm.vt100.metaSendsEscape: true                                                                                                                                                             
+! Fix the backspace key                                                                                                                                                                       
+XTerm.vt100.backarrowKey: false                                                                                                                                                               
+XTerm.ttyModes: erase ^?                                                                                                                                                                      
+                                                                                                                                                                                              
+! Use a nice truetype font and size by default...                                                                                                                                             
+XTerm.vt100.faceName: DejaVu Sans Mono:style=Book:antialias=true
+XTerm*faceSize:12
+! Every shell is a login shell by default (for inclusion of all necessary environment variables)                                                                                              
+xterm.loginshell: true                                                                                                                                                                        
+                                                                                                                                                                                              
+! I like a LOT of scrollback...                                                                                                                                                               
+xterm.savelines: 16384        
+
+XTerm.vt100.foreground: white
+XTerm.vt100.background: green
