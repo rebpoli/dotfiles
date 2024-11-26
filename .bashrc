@@ -43,7 +43,7 @@ alias grep='grep --color=always -n'
 
 alias PYENV=". ~/bin/PYENV_Geomec"
 
-eval `dircolors ${HOME}/.dir_colors`
+eval `dircolors ${HOME}/.dircolors`
 
 ## Avalia se estamos dentro de um container para identificar o ambiente
 SING=""
