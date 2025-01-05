@@ -1,0 +1,6 @@
+#!/bin/bash
+
+. ~/.bashrc
+#singularity exec --nv --bind /dfs_geral_ep/res/santos/unbs/gger/ /netprodapps/prod_apps/singularity/images/chimas/chimas.sif bash
+# singularity exec --nv --bind /home/renato/lm23_hdd:/lm23_hdd /home/renato/build/lm23.sif bash
+singularity exec --nv --bind /home/renato/lm23_hdd:/lm23_hdd /home/renato/build/build/lm23_ub24/lm23_ub24.sif bash
