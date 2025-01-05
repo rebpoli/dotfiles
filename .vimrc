@@ -12,8 +12,6 @@ autocmd BufReadPost,FileReadPre *.rcs set filetype=rcslog
 
 set path=.,/usr/include,../include,../../include,../src,../../src,,
 
-map <F4> :e %:p:s,.hxx$,.X123X,:s,.cxx$,.hxx,:s,.X123X$,.cxx,:s,.h$,.cpp,:s,.cpp$,.h,<CR>
-
 set ruler
 set foldmethod=diff
 set diffopt=filler,context:3
@@ -234,7 +232,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/tagbar'
 Plug 'vim-scripts/EnhCommentify.vim'
-Plug 'vim-scripts/a.vim'
+"Plug 'vim-scripts/a.vim'
 Plug 'vim-scripts/grep.vim'
 call plug#end()
 let g:airline#extensions#tabline#enabled = 1
