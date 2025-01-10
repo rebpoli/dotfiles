@@ -263,3 +263,14 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 call plug#end()
 
+colorscheme desert
+
+
+" SNIPPETS QUICK GUIDE
+" - \ll : enable autocompile (everytime file is saved)
+" - ~/.vim/UltiSnips/tex.snippets : the available snippets
+" Ex:
+" - LATEX<tab> : includes latex headers
+" - ///<tab>   : fraction
+" - align<tab> : begin{align}...
+"   etc
