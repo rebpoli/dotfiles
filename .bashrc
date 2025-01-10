@@ -180,3 +180,8 @@ if [[ "${HOSTNAME}" -eq "PGE-B3MHBZ2-LNX" ]] ; then
 fi
 
 source ~/build/pyenv/bin/activate
+
+## For VTK/Paraview to work
+export LIBGL_ALWAYS_INDIRECT=0
+## For pyplot to work without warnigns
+export QT_QPA_PLATFORM=xcb

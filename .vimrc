@@ -231,10 +231,12 @@ Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/tagbar'
-Plug 'vim-scripts/EnhCommentify.vim'
-"Plug 'vim-scripts/a.vim'
 Plug 'vim-scripts/grep.vim'
-call plug#end()
+Plug 'lervag/vimtex'
+Plug 'sirver/ultisnips'
+
+
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
@@ -244,3 +246,20 @@ let g:airline#extensions#tabline#buffer_idx_mode = 1
 set updatetime=500 " update time do tagbar
 map <F8> :Tagbar <CR>
 map <F7> :NERDTreeToggle <CR>
+
+map <F5> :w!<CR>
+
+"" Latex stuff
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
+
+"" Snippets
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+
+call plug#end()
+
