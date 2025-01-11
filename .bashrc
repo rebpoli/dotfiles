@@ -160,6 +160,7 @@ export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
 if [[ "${__SINGTAG}" -eq "CHIMAS-ENV" ]]; then
   [ -d "/lm23_hdd/chimas4d" ] && cd /lm23_hdd/chimas4d
   [ -d "/lm23_hdd/dev/chimas4d" ] && cd /lm23_hdd/dev/chimas4d
+  unset DBUS_SESSION_BUS_ADDRESS
 fi
 
 if [[ "${__SINGTAG}" -eq "FENICS" ]]; then
