@@ -265,9 +265,11 @@ call plug#end()
 
 colorscheme desert
 
+map \<Space> :VimtexView<CR>
 
 " SNIPPETS QUICK GUIDE
 " - \ll : enable autocompile (everytime file is saved)
+" - \<Space> : Compile and view current line in Zathura
 " - ~/.vim/UltiSnips/tex.snippets : the available snippets
 " Ex:
 " - LATEX<tab> : includes latex headers
