@@ -134,7 +134,7 @@ set wildmenu
 set background=dark
 "hi Folded ctermbg=gray
 
-"colorscheme desertmod
+"colorscheme zaibatsu
 
 map <F4> :A<CR>
 "set tags=./tags;../tags;../../tags
@@ -263,7 +263,7 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
 call plug#end()
 
-colorscheme desert
+colorscheme zaibatsu
 
 map \<Space> :VimtexView<CR>
 
