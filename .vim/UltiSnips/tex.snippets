@@ -12,6 +12,8 @@ endsnippet
 snippet LATEX "Start a latex file" 
 \documentclass{article}
 \usepackage{amsmath}
+\usepackage{stmaryrd} % for symbols like \llbracket
+\usepackage{bm} % for bold command \bm{}
 \title{$1}
 \author{Renato Poli}
 \begin{document}
@@ -23,11 +25,13 @@ snippet LATEX "Start a latex file"
 %   box      adds a box 
 %   eq       single equation
 %   eq*      single equation (unnumbered)
-%   align    multiple equations
-%   align*   multiple equations (unnumbered)
+%   al    multiple equations
+%   al*   multiple equations (unnumbered)
 %   beg      generic begin/end block
 %   $<tab>   Inline math
 %   ///      Fraction
+%   SSS      superscript
+%   [[       equation block (unnumbered)
 
 
 $3
@@ -35,20 +39,19 @@ $3
 \end{document}
 endsnippet
 
-
 snippet box "Box" 
 \fbox{\begin{minipage}{\linewidth}
 $1
 \end{minipage}} $2
 endsnippet
 
-snippet align "begin{align} / end{align}"
+snippet al "begin{align} / end{align}"
 \begin{align}
 	$1
 \end{align}
 endsnippet
 
-snippet align* "begin{align*} / end{align}"
+snippet al* "begin{align*} / end{align}"
 \begin{align*}
 	$1
 \end{align*}
@@ -76,10 +79,22 @@ $1
 $0
 endsnippet
 
+snippet [[ "Math" 
+\[
+$1
+\ .\]
+$0
+endsnippet
+
 snippet eq "Math" 
 \begin{equation}
 $1
 \end{equation}
+$0
+endsnippet
+
+snippet sec "Section" 
+\section{$1}
 $0
 endsnippet
 
