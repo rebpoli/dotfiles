@@ -25,7 +25,7 @@ hi Normal	gui=NONE guifg=White guibg=black
 hi Error	guibg=blue
 
 " highlight groups
-hi Cursor	guibg=khaki guifg=slategrey
+hi Cursor	guibg=khaki guifg=slategrey ctermbg=1
 "hi CursorIM
 "hi Directory
 "hi DiffAdd
@@ -74,7 +74,7 @@ hi NonText	cterm=bold ctermfg=darkblue
 hi Directory	ctermfg=darkcyan
 hi ErrorMsg	cterm=bold ctermfg=7 ctermbg=1
 hi IncSearch	cterm=NONE ctermfg=yellow ctermbg=green
-hi Search	cterm=NONE ctermfg=black ctermbg=yellow
+hi Search	cterm=bold ctermfg=yellow ctermbg=blue
 hi MoreMsg	ctermfg=darkgreen
 hi ModeMsg	cterm=NONE ctermfg=brown
 hi LineNr	gui=NONE guifg=darkgray ctermfg=darkgray
@@ -93,7 +93,7 @@ hi DiffAdd	ctermbg=4
 hi DiffChange	ctermbg=5
 hi DiffDelete	cterm=bold ctermfg=4 ctermbg=6
 hi DiffText	cterm=bold ctermbg=1
-hi Comment	ctermfg=green cterm=underline
+hi Comment	ctermfg=darkblue cterm=NONE
 hi Constant	ctermfg=brown
 hi Special	ctermfg=5
 hi Identifier	ctermfg=6

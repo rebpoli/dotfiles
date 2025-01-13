@@ -232,7 +232,6 @@ Plug 'preservim/tagbar'
 Plug 'vim-scripts/grep.vim'
 Plug 'lervag/vimtex'
 Plug 'sirver/ultisnips'
-Plug 'rafi/awesome-vim-colorschemes'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
