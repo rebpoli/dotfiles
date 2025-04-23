@@ -10,7 +10,7 @@ au! Syntax cmgdat1 source $VIM/cmgdat1.vim
 autocmd BufReadPost,FileReadPre *.lib set filetype=clipper
 autocmd BufReadPost,FileReadPre *.rcs set filetype=rcslog
 
-set path=.,/usr/include,../include,../../include,../src,../../src,,
+set path=.,/usr/include,../include,../../include,../src,../../src,include/,,
 
 set ruler
 set foldmethod=diff
@@ -134,8 +134,6 @@ set wildmenu
 set background=dark
 "hi Folded ctermbg=gray
 
-map <F4> :A<CR>
-"set tags=./tags;../tags;../../tags
 
 "fun! ShowFuncName()
 "  let lnum = line(".")
@@ -232,6 +230,8 @@ Plug 'preservim/tagbar'
 Plug 'vim-scripts/grep.vim'
 Plug 'lervag/vimtex'
 Plug 'sirver/ultisnips'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'morhetz/gruvbox'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
@@ -272,4 +272,9 @@ map \<Space> :VimtexView<CR>
 " - align<tab> : begin{align}...
 "   etc
 
-colorscheme desertmod
+"colorscheme desertmod
+colorscheme gruvbox
+"map <F4> :A<CR>
+noremap <F4> :call SwitchSourceHeader()<CR>
+
+set tags=./tags;../tags;../../tags;../../../tags;../../../../tags;../../../../../tags;/lm23_hdd/harpy/tags

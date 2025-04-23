@@ -60,7 +60,7 @@ function prompt_command {
     datetime=$(date +'%y-%b-%d %H:%M')
     extra="${EXTRA_PROMPT}"
       
-    let promptsize=$(echo -n "--------(${datetime})-$SING--(${PWD})--${extra}--${GITST}" | wc -c | tr -d " ")
+    let promptsize=$(echo -n "--------(${datetime})-$SING    --(${PWD})--${extra}--${GITST}" | wc -c | tr -d " ")
     let fillsize=${TERMWIDTH}-${promptsize}
     fill=""
     while [ "$fillsize" -gt "0" ] 
@@ -158,8 +158,9 @@ export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
 #export PETSC_DIR=/opt/petsc
 
 if [[ "${__SINGTAG}" -eq "CHIMAS-ENV" ]]; then
-  [ -d "/lm23_hdd/chimas4d" ] && cd /lm23_hdd/chimas4d
-  [ -d "/lm23_hdd/dev/chimas4d" ] && cd /lm23_hdd/dev/chimas4d
+  [ -d "/lm23_hdd/harpy" ] && cd /lm23_hdd/harpy
+#   [ -d "/lm23_hdd/chimas4d" ] && cd /lm23_hdd/chimas4d
+#   [ -d "/lm23_hdd/dev/chimas4d" ] && cd /lm23_hdd/dev/chimas4d
   unset DBUS_SESSION_BUS_ADDRESS
 fi
 
@@ -180,9 +181,22 @@ if [[ "${HOSTNAME}" -eq "PGE-B3MHBZ2-LNX" ]] ; then
     export HWLOC_COMPONENTS="-gl"
 fi
 
-source ~/build/pyenv/bin/activate
-
 ## For VTK/Paraview to work
 export LIBGL_ALWAYS_INDIRECT=0
 ## For pyplot to work without warnigns
 export QT_QPA_PLATFORM=xcb
+
+if [[ "${__SINGTAG}" -eq "LBPM-ENV" ]]; then
+  export PATH=/lbpm_hdd/lbpm/bin/:/usr/local/LBPM_sm86/bin/:${PATH}
+fi
+
+echo SYNGTAG: ${__SINGTAG}
+# if [[ "${__SINGTAG}" -eq "CHIMAS-ENV" ]]; then
+if [ "$__SINGTAG" = "CHIMAS-ENV" ] ; then
+  echo "Activating pyenv ..." "{__SINGTAG}"
+  source ~/build/pyenv/bin/activate
+else
+  echo "Activating pyenv-raw ..."
+  source ~/build/pyenv-raw/bin/activate
+fi
+

@@ -11,9 +11,11 @@ endsnippet
 
 snippet LATEX "Start a latex file" 
 \documentclass{article}
-\usepackage{amsmath}
+\usepackage{array,amsmath,graphicx}
+\usepackage[margin=1.5cm, top=1cm]{geometry}
 \usepackage{stmaryrd} % for symbols like \llbracket
 \usepackage{bm} % for bold command \bm{}
+\newcolumntype{L}{>$l<$} % text column for arrays
 \title{$1}
 \author{Renato Poli}
 \begin{document}
@@ -98,12 +100,9 @@ snippet sec "Section"
 $0
 endsnippet
 
-snippet '([A-Za-z])(\d)' "auto subscript" wrA
-`!p snip.rv = match.group(1)`_`!p snip.rv = match.group(2)`
-endsnippet
-
-snippet '([A-Za-z])_(\d\d)' "auto subscript2" wrA
-`!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
+snippet ssec "Subsection" 
+\subsection{$1}
+$0
 endsnippet
 
 snippet SSS "superscript" iA
@@ -113,5 +112,57 @@ endsnippet
 snippet /// "Fraction"
 \\frac{$1}{$2}$0
 endsnippet
+
+snippet table "Table"
+\begin{table}[htbp]
+\centering
+\begin{tabular}{ c c c }
+\hline
+cell1 & cell2 & cell3 \\\\
+\hline
+cell4 & cell5 & cell6 \\\\
+\hline
+\end{tabular}
+\caption{$1}
+\label{fig:$2}
+\end{table}
+endsnippet
+
+snippet \t "text"
+\text{$1}$0
+endsnippet
+
+snippet mtable "Math Table"
+\[\begin{array}{ c L }
+\hline
+E=mc^2 & any text\\\\ \hline
+cell4 & cell5 \\\\ \hline
+\end{array}\]
+\caption{$1}
+\label{fig:$2}
+endsnippet
+
+snippet tikz "Tikz picture" 
+\begin{figure}[htbp]
+\begin{tikzpicture}
+$3
+\end{tikzpicture}
+\caption{$2}
+\label{fig:$1}
+\end{figure}
+$0
+endsnippet
+
+snippet png "PNG figure"
+\begin{figure}[htbp]
+\centering
+\includegraphics{png/$1}
+\caption{$2}
+\label{fig:$1}
+\end{figure}
+$0
+endsnippet
+
+
 
 ### More in https://castel.dev/post/lecture-notes-1/
