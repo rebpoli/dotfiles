@@ -10,7 +10,7 @@ au! Syntax cmgdat1 source $VIM/cmgdat1.vim
 autocmd BufReadPost,FileReadPre *.lib set filetype=clipper
 autocmd BufReadPost,FileReadPre *.rcs set filetype=rcslog
 
-set path=.,/usr/include,../include,../../include,../src,../../src,include/,,
+set path=.,../include,../../include,../src,../../src,include/,../../../include,../../../src,,
 
 set ruler
 set foldmethod=diff
@@ -277,4 +277,4 @@ colorscheme gruvbox
 "map <F4> :A<CR>
 noremap <F4> :call SwitchSourceHeader()<CR>
 
-set tags=./tags;../tags;../../tags;../../../tags;../../../../tags;../../../../../tags;/lm23_hdd/harpy/tags
+set tags=/lm23_hdd/harpy/tags;./tags;../tags;../../tags;../../../tags;../../../../tags;../../../../../tags;
