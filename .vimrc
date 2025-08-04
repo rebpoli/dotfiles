@@ -232,6 +232,8 @@ Plug 'lervag/vimtex'
 Plug 'sirver/ultisnips'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'morhetz/gruvbox'
+Plug 'powerman/vim-ansi'
+Plug 'tpope/vim-fugitive'
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ''
